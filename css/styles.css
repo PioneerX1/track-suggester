@@ -1,6 +1,7 @@
 .results {
   display: none;
   border: 5px solid black;
+  padding-left: 20px;
 }
 
 #javaList {
