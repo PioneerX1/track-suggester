@@ -1,6 +1,7 @@
 $(document).ready(function() {
   $("form#track-form").submit(function(event) {
     //CODE FOR COLLECTING DATA
+    var name = $("input#name").val();
     var java = 0;
     var ruby = 0;
     var css = 0;
@@ -48,12 +49,19 @@ $(document).ready(function() {
       css += 1;
     }
 
-    alert("css is " + css + " ruby is " + ruby + " and java is " + java);
-
+    alert("css is " + css + " ruby is " + ruby + " and java is " + java + " and your NAME is " + name);
 
     //CODE FOR DETERMINING RESULTS
+    if (java > ruby && java > css) {
+      finalResult = "Java/Andoid";
+    } else if (ruby > java && ruby > css){
+      finalResult = "Ruby/Rails";
+    } else if (css > java && css > ruby) {
+      finalResult = "CSS/Design";
+    }
 
-    $("#results").text("Something Made Up!");
+    $("#inputName").text(name);
+    $("#results").text(finalResult);
     $(".results").show();
 
     event.preventDefault();

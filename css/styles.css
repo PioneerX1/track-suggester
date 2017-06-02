@@ -7,3 +7,9 @@
   font-family: monospace;
   font-weight: bold;
 }
+
+#inputName {
+  color: red;
+  font-family: monospace;
+  font-weight: bold;
+}
