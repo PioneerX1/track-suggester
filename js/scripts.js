@@ -1,6 +1,12 @@
 $(document).ready(function() {
   $("form#track-form").submit(function(event) {
     //CODE FOR COLLECTING DATA
+
+    //hide link lists if prev selected
+    $("#javaList").hide();
+    $("#rubyList").hide();
+    $("#cssList").hide();
+
     var name = $("input#name").val();
     var java = 0;
     var ruby = 0;
@@ -49,15 +55,37 @@ $(document).ready(function() {
       css += 1;
     }
 
+    /* TEST
     alert("css is " + css + " ruby is " + ruby + " and java is " + java + " and your NAME is " + name);
+    */
 
     //CODE FOR DETERMINING RESULTS
     if (java > ruby && java > css) {
       finalResult = "Java/Andoid";
+      $("#javaList").show();
     } else if (ruby > java && ruby > css){
       finalResult = "Ruby/Rails";
+      $("#rubyList").show();
     } else if (css > java && css > ruby) {
       finalResult = "CSS/Design";
+      $("#cssList").show();
+    } else if (java === ruby) {
+      finalResult = "Java/Android AND Ruby/Rails";
+      $("#javaList").show();
+      $("#rubyList").show();
+    } else if (java === css) {
+      finalResult = "Java/Android AND CSS/Design";
+      $("#javaList").show();
+      $("#cssList").show();
+    } else if (ruby === css) {
+      finalResult = "Ruby/Rails AND CSS/Design";
+      $("#rubyList").show();
+      $("#cssList").show();
+    } else if (ruby === css && java === css) {
+      finalResult = "ALL 3 LANGUAGES";
+      $("#javaList").show();
+      $("#rubyList").show();
+      $("#cssList").show();
     }
 
     $("#inputName").text(name);

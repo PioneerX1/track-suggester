@@ -1,5 +1,18 @@
 .results {
   display: none;
+  border: 5px solid black;
+}
+
+#javaList {
+  display: none;
+}
+
+#rubyList {
+  display: none;
+}
+
+#cssList {
+  display: none;
 }
 
 #results {
@@ -12,4 +25,12 @@
   color: red;
   font-family: monospace;
   font-weight: bold;
+}
+
+#for-bottom {
+  margin-bottom: 100px;
+}
+
+body {
+  background-color: #96d6e8;
 }
