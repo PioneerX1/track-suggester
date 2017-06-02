@@ -13,7 +13,7 @@ _This website is used to help students or potential students determine which tra
 * _Download the track-suggester folder_
 * _Open the index.html file_
 * _If published online, visit the website at_
-* _https://pioneerx1.github.io/portfolio/_
+* _https://pioneerx1.github.io/track-suggester/_
 
 ## Known Bugs
 
