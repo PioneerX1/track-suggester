@@ -59,9 +59,9 @@ $(document).ready(function() {
       css += 1;
     }
 
-/*
+
     alert("css is " + css + " ruby is " + ruby + " and java is " + java + " and your NAME is " + name);
-*/
+
     //CODE FOR DETERMINING RESULTS
     if (java > ruby && java > css) {
       finalResult = "Java/Andoid";
@@ -72,15 +72,15 @@ $(document).ready(function() {
     } else if (css > java && css > ruby) {
       finalResult = "CSS/Design";
       $("#cssList").show();
-    } else if (java === ruby) {
+    } else if (java === ruby && java!= css) {
       finalResult = "Java/Android AND Ruby/Rails";
       $("#javaList").show();
       $("#rubyList").show();
-    } else if (java === css) {
+    } else if (java === css && java != ruby) {
       finalResult = "Java/Android AND CSS/Design";
       $("#javaList").show();
       $("#cssList").show();
-    } else if (ruby === css) {
+    } else if (ruby === css && ruby != java) {
       finalResult = "Ruby/Rails AND CSS/Design";
       $("#rubyList").show();
       $("#cssList").show();
