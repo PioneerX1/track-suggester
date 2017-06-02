@@ -59,8 +59,9 @@ $(document).ready(function() {
       css += 1;
     }
 
-
+/*
     alert("css is " + css + " ruby is " + ruby + " and java is " + java + " and your NAME is " + name);
+*/
 
     //CODE FOR DETERMINING RESULTS
     if (java > ruby && java > css) {
